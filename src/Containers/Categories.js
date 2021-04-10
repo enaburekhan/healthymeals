@@ -31,7 +31,7 @@ const AllCategories = props => {
 };
 
 AllCategories.propTypes = {
-  categories: PropTypes.arrayOf(object).isRequired,
+  categories: PropTypes.arrayOf(PropTypes.object).isRequired,
   getCategories: PropTypes.func.isRequired,
 };
 
