@@ -1,21 +1,21 @@
-/* eslint-disable no-unused-vars */
-import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import '../App.css';
 import AllMeals from '../Containers/AllRecipes';
 import MealDetails from '../Containers/ItemDetails';
-import NavBar from '../Containers/Nav';
+import NavBar from '../Containers/Navbar';
 import AllCategories from '../Containers/Categories';
 
 const App = () => (
-  <div>
-    <NavBar />
-    <Switch>
-      <Route path="/" component={AllCategories} exact />
-      <Route path="/category/:category" component={AllMeals} />
-      <Route path="/meal/:id" component={MealDetails} />
-    </Switch>
-  </div>
+  <>
+    <Router>
+      <NavBar />
+      <Switch>
+        <Route exact path="/" component={AllCategories} />
+        <Route path="/category/:category" component={AllMeals} />
+        <Route path="/meal/:id" component={MealDetails} />
+      </Switch>
+    </Router>
+  </>
 );
 
 export default App;

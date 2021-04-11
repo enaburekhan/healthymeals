@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -13,7 +12,7 @@ import {
 
 const MealDetails = props => {
   const {
-    img, area, ingredients, match, fetchMeal, name, category, pending, resetSelected,
+    img, area, ingredients, match, fetchMeal, name, category, resetSelected,
   } = props;
   const { id } = match.params;
   useEffect(() => {
@@ -63,7 +62,6 @@ const mapDispatchToProps = {
 
 MealDetails.defaultProps = {
   img: '',
-  pending: false,
   name: '',
   category: '',
   area: '',
@@ -73,7 +71,6 @@ MealDetails.defaultProps = {
 MealDetails.propTypes = {
   img: PropTypes.string,
   area: PropTypes.string,
-  pending: PropTypes.bool,
   fetchMeal: PropTypes.func.isRequired,
   ingredients: PropTypes.arrayOf(String),
   match: PropTypes.shape({

@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-import React from 'react';
 import PropTypes from 'prop-types';
 
 const CategoryFilter = ({ onChange, value }) => {
@@ -8,7 +6,7 @@ const CategoryFilter = ({ onChange, value }) => {
     <div className="category-filter">
       <h3>RECIPE CATEGORIES</h3>
       <select onChange={onChange} value={value} className="filter m-20">
-        {categories.map(el => <option key={Math.random() * 100} value={el}>{el}</option>)}
+        {categories.map(val => <option key={Math.random() * 100} value={val}>{val}</option>)}
       </select>
     </div>
   );

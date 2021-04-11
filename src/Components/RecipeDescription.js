@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-import React from 'react';
 import PropTypes from 'prop-types';
 
 const RecipeDetails = ({
@@ -27,9 +25,9 @@ const RecipeDetails = ({
     <p>
       Ingredients:
     </p>
-    {ingredients.map(el => (
+    {ingredients.map(val => (
       <span key={Math.random() * 1000}>
-        {el}
+        {val}
         {' '}
         |
         {' '}

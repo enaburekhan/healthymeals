@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -11,7 +10,7 @@ import { UPDATE_CATEGORY } from '../Actions/index';
 
 const MealsList = props => {
   const {
-    products, pending, fetchAllMeals, category,
+    products, fetchAllMeals, category,
   } = props;
 
   useEffect(() => {
@@ -40,7 +39,6 @@ MealsList.defaultProps = {
 };
 
 MealsList.propTypes = {
-  pending: PropTypes.bool.isRequired,
   category: PropTypes.string.isRequired,
   fetchAllMeals: PropTypes.func.isRequired,
   products: PropTypes.arrayOf(String),

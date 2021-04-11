@@ -5,7 +5,7 @@ import RecipesReducer from './Recipes';
 import SingleRecipeReducer from './SingleRecipe';
 import { CategoriesReducer } from './Categories';
 
-const finalReducer = combineReducers({
+const rootReducer = combineReducers({
   allMeals: RecipesReducer,
   singleMeal: SingleRecipeReducer,
   categories: CategoriesReducer,
@@ -13,6 +13,6 @@ const finalReducer = combineReducers({
 
 const middlewares = [thunk];
 
-const store = createStore(finalReducer, applyMiddleware(...middlewares));
+const store = createStore(rootReducer, applyMiddleware(...middlewares));
 
 export default store;

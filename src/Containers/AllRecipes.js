@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import CategoryFilter from '../Components/CategoryFilter';
@@ -15,9 +13,9 @@ const AllMeals = props => {
 
   const { category } = match.params;
 
-  const handleFilterChange = evt => {
-    const newCategory = evt.target.value;
-    addFilter(evt.target.value);
+  const handleFilterChange = e => {
+    const newCategory = e.target.value;
+    addFilter(e.target.value);
     fetchAllMeals(newCategory);
   };
 

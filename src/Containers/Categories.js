@@ -1,13 +1,11 @@
-/* eslint-disable no-unused-vars */
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import PropTypes, { object } from 'prop-types';
+import PropTypes from 'prop-types';
 import getCategories from '../Actions/allCategories';
 import Category from '../Components/Category';
 import {
   getProductsError,
-  getProductsPending,
   getCategoriesList,
   categoryName,
   categoryDetails,
@@ -22,9 +20,9 @@ const AllCategories = props => {
 
   return (
     <div>
-      <h1 className="welcome-text"> Curious For More Yummy Meals?</h1>
+      <h1 className="welcome-text"> Click on your favorite type to select your choice?</h1>
       <div className="container">
-        {categories.map(el => <Link key={el.idCategory} to={`/category/${el.strCategory}`}><Category name={categoryName(el)} description={categoryDetails(el)} src={categoryImage(el)} /></Link>)}
+        {categories.map(val => <Link key={val.idCategory} to={`/category/${val.strCategory}`}><Category name={categoryName(val)} description={categoryDetails(val)} src={categoryImage(val)} /></Link>)}
       </div>
     </div>
   );
