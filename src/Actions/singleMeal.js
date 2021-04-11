@@ -3,21 +3,19 @@ import {
   fetchRecipesError,
 } from './index';
 
-function fetchMeal(id) {
-  return dispatch => {
-    fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
-      .then(response => response.json())
-      .then(response => {
-        if (response.error) {
-          throw (response.error);
-        }
-        dispatch(fetchSingleMeal(response.meals[0]));
-        return response;
-      })
-      .catch(error => {
-        dispatch(fetchRecipesError(error));
-      });
-  };
-}
+const fetchMeal = id => dispatch => {
+  fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
+    .then(res => res.json())
+    .then(res => {
+      if (res.error) {
+        throw (res.error);
+      }
+      dispatch(fetchSingleMeal(res.meals[0]));
+      return res;
+    })
+    .catch(error => {
+      dispatch(fetchRecipesError(error));
+    });
+};
 
 export default fetchMeal;

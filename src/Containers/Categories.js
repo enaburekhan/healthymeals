@@ -10,7 +10,7 @@ import {
   categoryName,
   categoryDetails,
   categoryImage,
-} from '../Constants/Index';
+} from '../Selectors/Index';
 
 const AllCategories = props => {
   const { getCategories, categories } = props;

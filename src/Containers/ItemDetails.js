@@ -8,7 +8,7 @@ import RecipeDetails from '../Components/RecipeDescription';
 import { resetSelected } from '../Actions/index';
 import {
   getImg, getArea, getInstructions, getIngredient, getName, categoryName, getProductsPending,
-} from '../Constants/Index';
+} from '../Selectors/Index';
 
 const MealDetails = props => {
   const {

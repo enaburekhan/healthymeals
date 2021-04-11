@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import MealPreview from '../Components/Meal';
 import fetchAllMeals from '../Actions/allMeals';
 import fetchMeal from '../Actions/singleMeal';
-import { getProductsError, getProducts, getProductsPending } from '../Constants/Index';
+import { getProductsError, getProducts, getProductsPending } from '../Selectors/Index';
 import { UPDATE_CATEGORY } from '../Actions/index';
 
 const MealsList = props => {
@@ -20,12 +20,12 @@ const MealsList = props => {
   return (
     <div>
       <div className="container">
-        {products.map(el => (
-          <Link to={`/meal/${el.idMeal}`} key={Math.random() * 1000}>
+        {products.map(val => (
+          <Link to={`/meal/${val.idMeal}`} key={Math.random() * 1000}>
             <MealPreview
-              src={el.strMealThumb}
-              name={el.strMeal}
-              id={el.idMeal}
+              src={val.strMealThumb}
+              name={val.strMeal}
+              id={val.idMeal}
             />
           </Link>
         ))}

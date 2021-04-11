@@ -3,20 +3,18 @@ import {
   fetchRecipesError,
 } from './index';
 
-function fetchAllCategories() {
-  return dispatch => {
-    fetch('https://www.themealdb.com/api/json/v1/1/categories.php')
-      .then(response => response.json())
-      .then(response => {
-        if (response.error) {
-          throw (response.error);
-        }
-        dispatch(fetchCategories(response.categories));
-      })
-      .catch(error => {
-        dispatch(fetchRecipesError(error));
-      });
-  };
-}
+const fetchAllCategories = () => dispatch => {
+  fetch('https://www.themealdb.com/api/json/v1/1/categories.php')
+    .then(res => res.json())
+    .then(res => {
+      if (res.error) {
+        throw (res.error);
+      }
+      dispatch(fetchCategories(res.categories));
+    })
+    .catch(error => {
+      dispatch(fetchRecipesError(error));
+    });
+};
 
 export default fetchAllCategories;

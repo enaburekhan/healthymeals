@@ -1,5 +1,5 @@
 import { combineReducers, applyMiddleware, createStore } from 'redux';
-
+import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 import RecipesReducer from './Recipes';
 import SingleRecipeReducer from './SingleRecipe';
@@ -11,8 +11,13 @@ const rootReducer = combineReducers({
   categories: CategoriesReducer,
 });
 
+const { NODE_ENV } = process.env;
 const middlewares = [thunk];
 
-const store = createStore(rootReducer, applyMiddleware(...middlewares));
+const enableDevTools = NODE_ENV === 'development'
+  ? composeWithDevTools(applyMiddleware(...middlewares))
+  : applyMiddleware(...middlewares);
+
+const store = createStore(rootReducer, enableDevTools);
 
 export default store;
