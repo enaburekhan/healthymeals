@@ -90,7 +90,7 @@ button:focus {
 }
 
 .nav-text {
-  color: #A7E8BD;
+  color: #a7e8bd;
   font-weight: bolder;
   font-size: 3em;
   padding: 1px;
@@ -281,4 +281,3 @@ button:focus {
 .desc-p {
   width: 60%;
 }
-
