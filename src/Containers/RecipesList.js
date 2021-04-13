@@ -8,7 +8,7 @@ import fetchMeal from '../Actions/singleMeal';
 import { getProductsError, getProducts, getProductsPending } from '../Selectors/Index';
 import { UPDATE_CATEGORY } from '../Actions/index';
 
-const MealsList = props => {
+const MealsList = (props) => {
   const {
     products, fetchAllMeals, category,
   } = props;
@@ -20,7 +20,7 @@ const MealsList = props => {
   return (
     <div>
       <div className="container">
-        {products.map(val => (
+        {products.map((val) => (
           <Link to={`/meal/${val.idMeal}`} key={Math.random() * 1000}>
             <MealPreview
               src={val.strMealThumb}
@@ -44,7 +44,7 @@ MealsList.propTypes = {
   products: PropTypes.arrayOf(String),
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   const { allMeals } = state;
   return (
     {

@@ -10,7 +10,7 @@ import {
   getImg, getArea, getInstructions, getIngredient, getName, categoryName, getProductsPending,
 } from '../Selectors/Index';
 
-const MealDetails = props => {
+const MealDetails = (props) => {
   const {
     img, area, ingredients, match, fetchMeal, name, category, resetSelected,
   } = props;
@@ -39,7 +39,7 @@ const MealDetails = props => {
   );
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   const { singleMeal } = state;
   const { details } = singleMeal;
   return (

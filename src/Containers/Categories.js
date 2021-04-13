@@ -12,7 +12,7 @@ import {
   categoryImage,
 } from '../Selectors/Index';
 
-const AllCategories = props => {
+const AllCategories = (props) => {
   const { getCategories, categories } = props;
   useEffect(() => {
     getCategories();
@@ -22,7 +22,7 @@ const AllCategories = props => {
     <div>
       <h1 className="welcome-text"> Click on your favorite type to select your choice?</h1>
       <div className="container">
-        {categories.map(val => <Link key={val.idCategory} to={`/category/${val.strCategory}`}><Category name={categoryName(val)} description={categoryDetails(val)} src={categoryImage(val)} /></Link>)}
+        {categories.map((val) => <Link key={val.idCategory} to={`/category/${val.strCategory}`}><Category name={categoryName(val)} description={categoryDetails(val)} src={categoryImage(val)} /></Link>)}
       </div>
     </div>
   );
@@ -37,7 +37,7 @@ const mapDispatchToProps = {
   getCategories,
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   const { categories } = state;
   return (
     {

@@ -6,14 +6,14 @@ import { getProductsPending } from '../Selectors/Index';
 import { UPDATE_CATEGORY } from '../Actions/index';
 import MealsList from './RecipesList';
 
-const AllMeals = props => {
+const AllMeals = (props) => {
   const {
     addFilter, match, current, fetchAllMeals,
   } = props;
 
   const { category } = match.params;
 
-  const handleFilterChange = e => {
+  const handleFilterChange = (e) => {
     const newCategory = e.target.value;
     addFilter(e.target.value);
     fetchAllMeals(newCategory);
@@ -44,7 +44,7 @@ AllMeals.propTypes = {
   match: PropTypes.shape().isRequired,
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   const { allMeals } = state;
   return (
     {

@@ -6,7 +6,7 @@ const CategoryFilter = ({ onChange, value }) => {
     <div className="category-filter">
       <h3>RECIPE CATEGORIES</h3>
       <select onChange={onChange} value={value} className="filter m-20">
-        {categories.map(val => <option key={Math.random() * 100} value={val}>{val}</option>)}
+        {categories.map((val) => <option key={Math.random() * 100} value={val}>{val}</option>)}
       </select>
     </div>
   );

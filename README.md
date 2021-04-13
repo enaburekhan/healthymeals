@@ -3,7 +3,7 @@ This is a browsable lists of meals that one can filter based on categories and a
 
  
  ## Live Demo:
-[healthyMeals](https://healty-meals-site-by-enaburekhan.netlify.app/meal/52878)
+[healthyMeals](https://healty-meals-site-by-enaburekhan.netlify.app)
 
 ## Screenshot
 ![healthyMeals](https://user-images.githubusercontent.com/51296741/114375099-3efdc300-9b7c-11eb-898c-f195d83b4eae.png)
@@ -17,6 +17,7 @@ This is a browsable lists of meals that one can filter based on categories and a
 - React
 - Redux
 - TheMealDB Api
+- Jest
 - Css3
 
 ## Getting Started
@@ -27,6 +28,11 @@ This is a browsable lists of meals that one can filter based on categories and a
 2. Cd into the cloned directory
 3. Install the required dependencies by using: `npm install`
 4. run `npm run start` to display the project on the browser
+
+**And to run the test on your local machine, follow these simple steps:**
+1. Install jest using `npm install --save-dev jest` if it's not already in the package.json. 
+2. run `npm test` 
+
 
 ## Author Details:
 
@@ -40,6 +46,6 @@ This is a browsable lists of meals that one can filter based on categories and a
 
 Kindly ⭐ Star this project on GitHub — it helps!
 
-## 📝 License
+## Acknowledgments
 
-This project is [MIT](lic.url) licensed.   
+- My thanks goes to Microverse and all our peers and colleagues there.

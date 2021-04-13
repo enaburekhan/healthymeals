@@ -3,16 +3,16 @@ import {
   fetchRecipesError,
 } from './index';
 
-const fetchAllCategories = () => dispatch => {
+const fetchAllCategories = () => (dispatch) => {
   fetch('https://www.themealdb.com/api/json/v1/1/categories.php')
-    .then(res => res.json())
-    .then(res => {
+    .then((res) => res.json())
+    .then((res) => {
       if (res.error) {
         throw (res.error);
       }
       dispatch(fetchCategories(res.categories));
     })
-    .catch(error => {
+    .catch((error) => {
       dispatch(fetchRecipesError(error));
     });
 };

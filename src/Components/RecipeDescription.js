@@ -25,7 +25,7 @@ const RecipeDetails = ({
     <p>
       Ingredients:
     </p>
-    {ingredients.map(val => (
+    {ingredients.map((val) => (
       <span key={Math.random() * 1000}>
         {val}
         {' '}
