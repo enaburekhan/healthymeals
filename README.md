@@ -9,7 +9,7 @@ This is a browsable lists of meals that one can filter based on categories and a
 ![healthyMeals](https://user-images.githubusercontent.com/51296741/114375099-3efdc300-9b7c-11eb-898c-f195d83b4eae.png)
 
 ## Video presentation
-[video](https://gist.github.com/enaburekhan/97ff52435178bf66e6c315a006fefa7d)
+[video](https://gist.github.com/enaburekhan/e7f257e3fb2c025dd3161222a9568798)
 
 ## Built-With
 

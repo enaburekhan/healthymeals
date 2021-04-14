@@ -11,8 +11,8 @@ const App = () => (
       <NavBar />
       <Switch>
         <Route exact path="/" component={AllCategories} />
-        <Route path="/category/:category" component={AllMeals} />
-        <Route path="/meal/:id" component={MealDetails} />
+        <Route exact path="/category/:category" component={AllMeals} />
+        <Route exact path="/meal/:id" component={MealDetails} />
       </Switch>
     </Router>
   </>
